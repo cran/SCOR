@@ -7,20 +7,57 @@
 \alias{optimized_ULBA}
 \title{Optimizing Different Estimators Of Hyper Volume Under Manifold}
 \usage{
-optimized_EHUM(beta_start, labels, x_mat, rho = 2, phi = 10^(-3),
-  max_iter = 50000, s_init = 2, tol_fun = 10^(-6),
-  tol_fun_2 = 10^(-6), minimize = FALSE, time = 6e+05,
-  print = FALSE, lambda = 10^(-3), parallel = TRUE)
+optimized_EHUM(
+  beta_start,
+  labels,
+  x_mat,
+  rho = 2,
+  phi = 0.001,
+  max_iter = 50000,
+  s_init = 2,
+  tol_fun = 1e-06,
+  tol_fun_2 = 1e-06,
+  minimize = FALSE,
+  time = 36000,
+  print = FALSE,
+  lambda = 0.001,
+  parallel = TRUE
+)
 
-optimized_SHUM(beta_start, labels, x_mat, p = 0, rho = 2,
-  phi = 10^(-3), max_iter = 50000, s_init = 2, tol_fun = 10^(-6),
-  tol_fun_2 = 10^(-6), minimize = FALSE, time = 6e+05,
-  print = FALSE, lambda = 10^(-3), parallel = TRUE)
+optimized_SHUM(
+  beta_start,
+  labels,
+  x_mat,
+  p = 0,
+  rho = 2,
+  phi = 0.001,
+  max_iter = 50000,
+  s_init = 2,
+  tol_fun = 1e-06,
+  tol_fun_2 = 1e-06,
+  minimize = FALSE,
+  time = 36000,
+  print = FALSE,
+  lambda = 0.001,
+  parallel = TRUE
+)
 
-optimized_ULBA(beta_start, labels, x_mat, rho = 2, phi = 10^(-3),
-  max_iter = 50000, s_init = 2, tol_fun = 10^(-6),
-  tol_fun_2 = 10^(-6), minimize = FALSE, time = 6e+05,
-  print = FALSE, lambda = 10^(-3), parallel = TRUE)
+optimized_ULBA(
+  beta_start,
+  labels,
+  x_mat,
+  rho = 2,
+  phi = 0.001,
+  max_iter = 50000,
+  s_init = 2,
+  tol_fun = 1e-06,
+  tol_fun_2 = 1e-06,
+  minimize = FALSE,
+  time = 36000,
+  print = FALSE,
+  lambda = 0.001,
+  parallel = TRUE
+)
 }
 \arguments{
 \item{beta_start}{The initial guess for optimum \eqn{\beta} by user}
@@ -66,15 +103,18 @@ Optimization of EHUM, SHUM and ULBA using SCOptim.
 \examples{
 
 \donttest{
-  optimized_SHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+R <- optimized_SHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+estimate_SHUM(R, colnames(AL), AL)
 # This run will take about 10 mins on average based on computational capacity of the system
 # Optimum value of HUM estimate noticed for this case : 0.8440681
 }
 
-optimized_EHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+R <- optimized_EHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+estimate_EHUM(R, colnames(AL), AL)
 # Optimum value of HUM estimate noticed for this case : 0.8403805
 
-optimized_ULBA(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+R <- optimized_ULBA(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+estimate_ULBA(R, colnames(AL), AL)
 # Optimum value of HUM estimate noticed for this case : 0.9201903
 
 }

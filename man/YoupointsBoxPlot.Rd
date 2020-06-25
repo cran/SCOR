@@ -4,8 +4,7 @@
 \alias{YoupointsBoxPlot}
 \title{Visualization Based On Youden Indices.}
 \usage{
-YoupointsBoxPlot(beta, labels, x_mat, cat_names = NULL,
-  grid_size = 100)
+YoupointsBoxPlot(beta, labels, x_mat, cat_names = NULL, grid_size = 100)
 }
 \arguments{
 \item{beta}{The parameter we do HUM based on}

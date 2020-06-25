@@ -4,7 +4,9 @@
 \name{AL}
 \alias{AL}
 \title{Alzheimer's disease neuropsychometric marker dataset}
-\format{A data frame with 108 observations on the following 12 variables.}
+\format{
+A data frame with 108 observations on the following 12 variables.
+}
 \usage{
 data(AL)
 }

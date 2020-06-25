@@ -250,15 +250,15 @@ SCOptim <-
   function(x0,
            func,
            rho = 2,
-           phi = 10 ^ (-3),
-           max_iter = 50000,
+           phi = 1e-3,
+           max_iter = 5e+04,
            s_init = 2,
-           tol_fun = 10 ^ (-6),
-           tol_fun_2 = 10 ^ (-6),
+           tol_fun = 1e-6,
+           tol_fun_2 = 1e-6,
            minimize = TRUE,
-           time = 600000,
+           time = 3.6e+04,
            print = FALSE,
-           lambda = 10 ^ (-3),
+           lambda = 1e-3,
            parallel = FALSE)
   {
     if (print)

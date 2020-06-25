@@ -26,15 +26,18 @@
 #' @examples
 #'
 #' \donttest{
-#'   optimized_SHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' R <- optimized_SHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' estimate_SHUM(R, colnames(AL), AL)
 #' # This run will take about 10 mins on average based on computational capacity of the system
 #' # Optimum value of HUM estimate noticed for this case : 0.8440681
 #' }
 #'
-#' optimized_EHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' R <- optimized_EHUM(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' estimate_EHUM(R, colnames(AL), AL)
 #' # Optimum value of HUM estimate noticed for this case : 0.8403805
 #'
-#' optimized_ULBA(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' R <- optimized_ULBA(rep(1, 12), colnames(AL), AL, parallel = FALSE)
+#' estimate_ULBA(R, colnames(AL), AL)
 #' # Optimum value of HUM estimate noticed for this case : 0.9201903
 #'
 #' @name optimized_HUM
@@ -47,15 +50,15 @@ optimized_EHUM <-
            labels,
            x_mat,
            rho = 2,
-           phi = 10 ^ (-3),
-           max_iter = 50000,
+           phi = 1e-3,
+           max_iter = 5e+04,
            s_init = 2,
-           tol_fun = 10 ^ (-6),
-           tol_fun_2 = 10 ^ (-6),
+           tol_fun = 1e-6,
+           tol_fun_2 = 1e-6,
            minimize = FALSE,
-           time = 600000,
+           time = 3.6e+04,
            print = FALSE,
-           lambda = 10 ^ (-3),
+           lambda = 1e-3,
            parallel = TRUE)
   {
     stopifnot(nrow(x_mat) == length(beta_start))
@@ -82,7 +85,7 @@ optimized_EHUM <-
         parallel
       )
     #Thus the performing function of the vaue obtained through SCOptim gives maximum value
-    return(func(R))
+    return(R)
   }
 
 #' @rdname optimized_HUM
@@ -93,15 +96,15 @@ optimized_SHUM <-
            x_mat,
            p = 0,
            rho = 2,
-           phi = 10 ^ (-3),
-           max_iter = 50000,
+           phi = 1e-3,
+           max_iter = 5e+04,
            s_init = 2,
-           tol_fun = 10 ^ (-6),
-           tol_fun_2 = 10 ^ (-6),
+           tol_fun = 1e-6,
+           tol_fun_2 = 1e-6,
            minimize = FALSE,
-           time = 600000,
+           time = 3.6e+04,
            print = FALSE,
-           lambda = 10 ^ (-3),
+           lambda = 1e-3,
            parallel = TRUE)
   {
     stopifnot(nrow(x_mat) == length(beta_start))
@@ -128,7 +131,7 @@ optimized_SHUM <-
         parallel
       )
     #Thus the performing function of the vaue obtained through SCOptim gives maximum value
-    return(func(R))
+    return(R)
   }
 
 #' @rdname optimized_HUM
@@ -138,15 +141,15 @@ optimized_ULBA <-
            labels,
            x_mat,
            rho = 2,
-           phi = 10 ^ (-3),
-           max_iter = 50000,
+           phi = 1e-3,
+           max_iter = 5e+04,
            s_init = 2,
-           tol_fun = 10 ^ (-6),
-           tol_fun_2 = 10 ^ (-6),
+           tol_fun = 1e-6,
+           tol_fun_2 = 1e-6,
            minimize = FALSE,
-           time = 600000,
+           time = 3.6e+04,
            print = FALSE,
-           lambda = 10 ^ (-3),
+           lambda = 1e-3,
            parallel = TRUE)
   {
     stopifnot(nrow(x_mat) == length(beta_start))
@@ -174,5 +177,5 @@ optimized_ULBA <-
         parallel
       )
     #Thus the performing function of the vaue obtained through SCOptim gives maximum value
-    return(func(R))
+    return(R)
   }

@@ -4,10 +4,21 @@
 \alias{SCOptim}
 \title{Spherically Constrained Optimization}
 \usage{
-SCOptim(x0, func, rho = 2, phi = 10^(-3), max_iter = 50000,
-  s_init = 2, tol_fun = 10^(-6), tol_fun_2 = 10^(-6),
-  minimize = TRUE, time = 6e+05, print = FALSE, lambda = 10^(-3),
-  parallel = FALSE)
+SCOptim(
+  x0,
+  func,
+  rho = 2,
+  phi = 0.001,
+  max_iter = 50000,
+  s_init = 2,
+  tol_fun = 1e-06,
+  tol_fun_2 = 1e-06,
+  minimize = TRUE,
+  time = 36000,
+  print = FALSE,
+  lambda = 0.001,
+  parallel = FALSE
+)
 }
 \arguments{
 \item{x0}{The initial guess by user}

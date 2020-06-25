@@ -6,7 +6,7 @@
 \alias{SCOR-package}
 \title{SCOR: Spherically Constrained Optimization Routine}
 \description{
-A non-convex optimization package that optimizes any function under the criterion, combination of
+A non convex optimization package that optimizes any function under the criterion, combination of
               variables are on the surface of a unit sphere, as described in the paper : Das et al. (2019) <arXiv:1909.04024> .
 }
 \seealso{
