@@ -12,7 +12,7 @@ A non convex optimization package that optimizes any function under the criterio
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/synx21/SCOR}
+  \item \url{https://github.com/synx21/SCOR/}
 }
 
 }

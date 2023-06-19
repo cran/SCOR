@@ -27,7 +27,7 @@
 #' f <- function(x)
 #' return(x[2]^2 + x[3]^3 +x[4]^4)
 #'
-#' SCOptim(rep(1,10), f)
+#' SCOptim(rep(1,10), f)library(devtools)
 #'
 #' SCOptim(c(2,4,6,2,1), f, minimize = FALSE, print = TRUE)
 #' #Will Print the List and Find the Maximum
@@ -35,17 +35,12 @@
 #' SCOptim(c(1,2,3,4), f, time = 10, lambda = 1e-2)
 #' #Will perform no iterations after 10 secs, Sparsity Threshold is 0.01
 #'
-#' \donttest{
-#'  SCOptim(c(2,6,2,7,8), f, parallel = TRUE)
-#'  #Will do Parallel Computing
-#' }
-#'
 #' @references
 #' \itemize{
 #'
 #'   \item Das, Priyam and De, Debsurya and Maiti, Raju and Chakraborty, Bibhas and Peterson, Christine B \cr
 #'    "Estimating the Optimal Linear Combination of Biomarkers using Spherically Constrained Optimization" \cr
-#'          (available at `arXiv \url{http://arxiv.org/abs/1909.04024}).
+#'          (available at `arXiv \url{https://arxiv.org/abs/1909.04024}).
 #' }
 #'
 #'

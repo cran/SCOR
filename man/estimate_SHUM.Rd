@@ -35,6 +35,6 @@ matrix(rnorm(300), nrow = 10))
 
   \item Maiti, Raju and Li, Jialiang and Das, Priyam and Feng, Lei and Hausenloy, Derek and Chakraborty, Bibhas \cr
          "A distribution-free smoothed combination method of biomarkers to improve diagnostic accuracy in multi-category classification" \cr
-         (available at `arXiv \url{http://arxiv.org/abs/1904.10046}).
+         (available at `arXiv \url{https://arxiv.org/abs/1904.10046}).
 }
 }
